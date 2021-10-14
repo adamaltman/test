@@ -1280,10 +1280,10 @@ info:
         altText: MediaConnect AS
 servers:
     -
-        url: 'https://api.mediaconnect.no/capi/'
+        url: 'https://api.mediaconnect.no/capi'
         description: Production
     -
-        url: 'https://api-test.mediaconnect.no/capi/'
+        url: 'https://api-test.mediaconnect.no/capi'
         description: Test
 paths:
     /v1/customer/address:
