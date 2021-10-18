@@ -1,7 +1,7 @@
 openapi: 3.0.2
 info:
     title: Mediaconnect API Reference
-    version: 14.10.2021
+    version: 18.10.2021
     description: >-
         # Introduction
 
