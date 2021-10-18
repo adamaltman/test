@@ -19,17 +19,6 @@ info:
         or any other information users shall have access to. A partner will often have only one site, but may
         have many.
 
-        * **Clients**: A client is a third-party website or app that uses ConnectID. A client may serve
-        information for one or more newspapers, magazines, newsletters or other similar products. It may also
-        have discussion forums and other services a user is able to access. The information may be available
-        without a login or require a login. It may be available free or only if paid for. The services
-        described here makes login (authentication) and user authorization available to a site to make it able
-        to present only the authorized information to any user. Each client must have a unique clientId.
-
-        * **Users**: Any end user with access to information. This may be a reader, a subscriber or someone
-        who orders something. It may also be someone who takes part in a discussion and where it necessary to
-        log in before posting.
-
 
         ## Versioning and changelog
 
@@ -1987,18 +1976,6 @@ paths:
                                 Example 1:
                                     value: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<deliveryStopResponse>\r\n    <deliveryStops>\r\n        <deliveryStop>\r\n            <id>1</id>\r\n            <product>CO27409</product>\r\n            <stopTime>2019-06-21T14:56:01.000+0000</stopTime>\r\n            <stopEndTime>2019-07-01T14:56:01.000+0000</stopEndTime>\r\n            <stopType>temporary</stopType>\r\n             <deliveryStopChannel>BS</deliveryStopChannel>\r\n        </deliveryStop>\r\n    </deliveryStops>\r\n</deliveryStopResponse>"
                     description: OK
-                '400':
-                    content:
-                        application/json:
-                            schema:
-                                $ref: '#/components/schemas/Error400'
-                        application/xml:
-                            schema:
-                                $ref: '#/components/schemas/Error400'
-                            examples:
-                                Example 1:
-                                    value: "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\r\n<error>\r\n    <uniqueId>33ddb545-a88f-4e5d-906d-5af03e9a8dd1</uniqueId>\r\n    <exceptionType>VALIDATION</exceptionType>\r\n    <errorMessage>Error message here, e.g. missing field</errorMessage>\r\n</error>"
-                    description: Bad Request
                 '500':
                     content:
                         application/json:
@@ -13939,13 +13916,11 @@ components:
                                     alternative offers.
                                 maxLength: 1
                                 type: string
-                            customerNumber:
-                                description: Customer number
-                                type: integer
                             product:
                                 description: Product on invoice
                                 maxLength: 12
                                 type: string
+                                deprecated: true
                             productName:
                                 description: Product description/name
                                 maxLength: 40
