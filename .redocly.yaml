@@ -8,3 +8,4 @@ lint:
     no-unused-components: warning
 referenceDocs:
   showConsole: false
+  expandResponses: 200
