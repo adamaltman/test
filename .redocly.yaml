@@ -3,7 +3,7 @@ apiDefinitions:
   main: openapi.yaml
 lint:
   extends:
-    - minimal
+    - recommended
   rules:
     no-unused-components: warning
 referenceDocs:
