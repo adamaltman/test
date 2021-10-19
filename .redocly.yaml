@@ -7,4 +7,4 @@ lint:
   rules:
     no-unused-components: warning
 referenceDocs:
-  pagination: none
+  expand-responses: 200
