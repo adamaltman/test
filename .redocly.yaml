@@ -3,9 +3,9 @@ apiDefinitions:
   main: openapi.yaml
 lint:
   extends:
-    - recommended
+    - minimal
   rules:
     no-unused-components: warning
 referenceDocs:
   showConsole: true
-  expandResponses: all
+  expandResponses: "200"
